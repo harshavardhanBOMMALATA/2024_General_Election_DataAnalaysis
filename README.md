@@ -181,3 +181,19 @@ update partywise_results
 set alliance = 'INDIA'
 where name in ('INC', 'DMK', 'SP', 'TMC', 'AAP', 'RJD', 'CPM', 'CPI', 'IUML', 'JMM');
 ```
+
+## Reports
+
+- **Database Schema**: Includes structured tables for `state`, `statewise_results`, `partywise_results`, and `constituencywise_details` with relationships using primary and foreign keys.
+
+- **Data Analysis**: 
+  - Total number of seats won per party.
+  - Statewise distribution of seats.
+  - Top winning party in each state.
+  - Total seats secured by major alliances like NDA and INDIA.
+
+- **Summary Reports**: 
+  - State-level and national-level seat distribution.
+  - Alliance-wise performance.
+  - Constituency-level candidate and vote insights.
+
