@@ -10,4 +10,4 @@ This project explores Indian General Election results using SQL and CSV data. We
 
 This project demonstrates the implementation of an Indian Election Results Analysis System using SQL. It includes designing normalized tables, defining relationships, and executing complex SQL queries. The goal is to showcase skills in database design, data manipulation, and analytical querying.
 
-![election_project]()
+![election_project](indian_general_election.jpg)
