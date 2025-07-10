@@ -20,3 +20,4 @@ This project demonstrates the implementation of an Indian Election Results Analy
 4. **CTAS (Create Table As Select)**: Use CTAS to generate derived tables for analytical insights like top margins and party-wise wins.
 5. **Advanced SQL Queries**: Write complex queries to analyze state-wise results, vote margins, candidate comparisons, and party performance.
 
+![schema](schema.png)
