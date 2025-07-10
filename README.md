@@ -64,3 +64,120 @@ CREATE TABLE constituencywise_details (
     constituency_id VARCHAR(100),
     FOREIGN KEY (constituency_id) REFERENCES statewise_results(parliament_constituency)
 );
+
+### 2. CRUD Operations
+
+- **Create**: Inserted sample records into the `state` and `statewise_results` tables.  
+- **Read**: Retrieved and verified data from tables.  
+- **Update**: Updated alliance info in `partywise_results`.  
+- **Delete**: Removed unwanted party records from `partywise_results`.
+
+---
+
+**Task 1: Create Records**
+
+```sql
+insert into state values (1, 'Andhra Pradesh');
+
+insert into statewise_results 
+values (1, 'Narsapuram', 'Bharath', 'TDP', 25000);
+```
+
+---
+
+**Task 2: Read Data**
+
+```sql
+select * from state;
+
+select * from statewise_results;
+```
+
+---
+
+**Task 3: Update Party Alliance - NDA**
+
+```sql
+update partywise_results 
+set alliance = 'NDA' 
+where name in ('BJP', 'TDP', 'Jana Sena');
+```
+
+---
+
+**Task 4: Update Party Alliance - INDIA**
+
+```sql
+update partywise_results 
+set alliance = 'INDIA' 
+where name in ('INC', 'DMK', 'SP', 'TMC');
+```
+
+---
+
+**Task 5: Delete Unwanted Records**
+
+```sql
+delete from partywise_results 
+where name = 'Independent';
+```
+### 3. SQL Analysis Queries
+
+**Task 6: Count total seats**
+
+```sql
+select count(*) as total_seats from constituencywise_results;
+```
+
+---
+
+**Task 7: Statewise Total Seats**
+
+```sql
+select statewise_results.stateid, state.state, count(*) as total_seats
+from statewise_results
+inner join state on statewise_results.stateid = state.id
+group by state.id;
+```
+
+---
+
+**Task 8: NDA Alliance Total Seats**
+
+```sql
+select sum(won) as nda_total
+from partywise_results
+where name in ('BJP', 'TDP', 'Jana Sena', 'Shiv Sena', 'Apna Dal', 'JD(U)', 'NISHAD', 'RPI', 'HAM', 'AGP');
+```
+
+---
+
+**Task 9: Which Party Won Most Seats in Every State**
+
+```sql
+select state, name, max(won) as max_won
+from (
+  select s.state, p.name, pr.won,
+         row_number() over(partition by s.state order by pr.won desc) as rnk
+  from partywise_results pr
+  join statewise_results sr on pr.name = sr.party_name
+  join state s on sr.stateid = s.id
+) as ranked
+where rnk = 1;
+```
+
+---
+
+**Task 10: Add Alliance Column**
+
+```sql
+alter table partywise_results add column alliance varchar(100);
+
+update partywise_results
+set alliance = 'NDA'
+where name in ('BJP', 'TDP', 'Jana Sena', 'Shiv Sena', 'Apna Dal', 'JD(U)', 'NISHAD', 'RPI', 'HAM', 'AGP');
+
+update partywise_results
+set alliance = 'INDIA'
+where name in ('INC', 'DMK', 'SP', 'TMC', 'AAP', 'RJD', 'CPM', 'CPI', 'IUML', 'JMM');
+```
