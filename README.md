@@ -200,3 +200,14 @@ where name in ('INC', 'DMK', 'SP', 'TMC', 'AAP', 'RJD', 'CPM', 'CPI', 'IUML', 'J
 ## Conclusion
 
 This project demonstrates the practical application of advanced SQL skills in building and analyzing a complete election results database. It covers full database design, CRUD operations, and complex analytical queries involving joins, grouping, filtering, and real-world political data analysis. This project strengthens SQL proficiency and prepares for handling real-time data in domains like politics, governance, and public datasets.
+
+## How to Use
+
+1. **Clone the Repository**: Clone this repository to your local machine.  
+   [CLICK FOR CLONE](https://github.com/harshavardhanBOMMALATA/2024_General_Election_DataAnalaysis.git)
+
+2. **Set Up the Database**: Open any SQL tool (e.g., MySQL Workbench) and execute the SQL scripts in the `election_project.sql` file to create tables and insert data.
+
+3. **Run the Queries**: Use the SQL queries provided in the file to perform CRUD operations and detailed election analysis.
+
+4. **Explore and Modify**: Modify the queries to extract deeper insights like party performance, alliance comparisons, state-wise trends, and more.
