@@ -197,3 +197,6 @@ where name in ('INC', 'DMK', 'SP', 'TMC', 'AAP', 'RJD', 'CPM', 'CPI', 'IUML', 'J
   - Alliance-wise performance.
   - Constituency-level candidate and vote insights.
 
+## Conclusion
+
+This project demonstrates the practical application of advanced SQL skills in building and analyzing a complete election results database. It covers full database design, CRUD operations, and complex analytical queries involving joins, grouping, filtering, and real-world political data analysis. This project strengthens SQL proficiency and prepares for handling real-time data in domains like politics, governance, and public datasets.
