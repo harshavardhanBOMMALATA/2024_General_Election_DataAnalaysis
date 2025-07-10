@@ -211,3 +211,14 @@ This project demonstrates the practical application of advanced SQL skills in bu
 3. **Run the Queries**: Use the SQL queries provided in the file to perform CRUD operations and detailed election analysis.
 
 4. **Explore and Modify**: Modify the queries to extract deeper insights like party performance, alliance comparisons, state-wise trends, and more.
+
+## Author - HARSHAVARDHAN BOMMALATA
+
+This project showcases SQL skills essential for database management and analysis. For more content on SQL and data analysis, connect with me through the following channels:
+
+- 📸 **Instagram**: [CONTACT ME PERSONALLY](https://www.instagram.com/ALWAYS_HARSHA_ROYAL/)
+- 💼 **LinkedIn**: [Connect with me professionally](https://www.linkedin.com/in/harshavardhan-bommalata-7bb9442b0/)
+- 📧 **Email**: HBOMMALATA@GMAIL.COM
+
+Thank you for your interest in this project!
+
