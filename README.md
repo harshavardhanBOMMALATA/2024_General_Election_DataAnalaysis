@@ -21,3 +21,46 @@ This project demonstrates the implementation of an Indian Election Results Analy
 5. **Advanced SQL Queries**: Write complex queries to analyze state-wise results, vote margins, candidate comparisons, and party performance.
 
 ![schema](schema.png)
+
+# 🗃️ Indian Elections SQL Project – Schema, CRUD, and Queries
+
+## 🔨 Table Creation Scripts
+
+```sql
+-- State table
+CREATE TABLE state (
+    id INT PRIMARY KEY,
+    state VARCHAR(100) NOT NULL
+);
+
+-- Statewise Results
+CREATE TABLE statewise_results (
+    stateid INT,
+    parliament_constituency VARCHAR(100) PRIMARY KEY,
+    winning_candidate VARCHAR(100),
+    winning_party VARCHAR(100),
+    margin INT,
+    FOREIGN KEY (stateid) REFERENCES state(id)
+);
+
+-- Partywise Results
+CREATE TABLE partywise_results (
+    stateid INT,
+    name VARCHAR(100),
+    won INT,
+    alliance VARCHAR(100),
+    FOREIGN KEY (stateid) REFERENCES state(id)
+);
+
+-- Constituencywise Details
+CREATE TABLE constituencywise_details (
+    s_no INT,
+    candidate_name VARCHAR(100) NOT NULL,
+    party_name VARCHAR(100),
+    evm_votes INT,
+    postal_votes INT,
+    total_votes INT,
+    percentage_votes DECIMAL(5,2),
+    constituency_id VARCHAR(100),
+    FOREIGN KEY (constituency_id) REFERENCES statewise_results(parliament_constituency)
+);
