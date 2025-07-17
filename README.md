@@ -220,5 +220,5 @@ This project showcases SQL skills essential for database management and analysis
 - 💼 **LinkedIn**: [Connect with me professionally](https://www.linkedin.com/in/harshavardhan-bommalata-7bb9442b0/)
 - 📧 **Email**: HBOMMALATA@GMAIL.COM
 
-Thank you for your interest in this project!
+Thank you for your interest in this project!! 
 
